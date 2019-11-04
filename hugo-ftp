@@ -1,0 +1,18 @@
+#!/bin/bash
+
+USER=               #your user
+HOME_HUGODIR=       #the dir of your site from home
+HOST=               #your ftp host
+FTPUSER=            #your ftp user
+FTPPASSWORD=        #your ftp password
+FTPSITEDIRECTORY=   #your site directory
+echo Script inizialization
+cd "/home/$USER/$HOME_HUGODIR"
+hugo
+cd public
+ncftpput -u $FTPUSER -p $FTPPASSWORD -R $HOST $FTPSITEDIRECTORY *
+
+
+
+
+
