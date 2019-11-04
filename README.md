@@ -1,1 +1,5 @@
 HUGO-FTP
+
+Dependencies:
+ncftp
+
